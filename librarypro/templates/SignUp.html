@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUP</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+  <form method="post" action="/SignUp/">
+    {% csrf_token %}
+    <h2>Sign Up</h2>
+
+    <input type="text" name="name" placeholder="Your Name">
+    <input type="email" name="email" placeholder="Your Email">
+    <input type="password" name="password" placeholder="Password">
+    <button type="submit">Sign Up</button>
+  </form>
+
+
+  <div class="login-link">
+    <a href="/login">I already have an account.</a>
+  </div>
+</body>
+</html>
